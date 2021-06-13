@@ -1,4 +1,4 @@
-# SamsungTV_IR_Remote_Control_With_Arduino
+# SamsungTV IR Remote Control With Arduino
 
 ## Introduction
 We use IR Remote controls daily. Home appliances like TV, AC, Audio/Video Systems, nowadays smart appliances like Fans, Water Coolers, etc., comes with a Remote Control. 
@@ -67,32 +67,32 @@ Further, I decoded the frame to display the command and the Key pressed by the u
 
 | Key  | Code |
 | :---:| :---:|
-| ON/OFF | 0x2UL |
-| 1 | 0x4UL |
-| 2 | 0x5UL |
-| 3 | 0x6UL |
-| Volume+ | 0x7UL |
-| 4 | 0x8UL |
-| 5 | 0x9UL |
-| 6 | 0xAUL |
-| Volume- | 0xBUL |
-| 7 | 0xCUL |
-| 8 | 0xDUL |
-| 9 | 0xEUL |
-| Mute | 0xFUL |
+| ON/OFF | 0x2 |
+| 1 | 0x4 |
+| 2 | 0x5 |
+| 3 | 0x6 |
+| Volume+ | 0x7 |
+| 4 | 0x8 |
+| 5 | 0x9 |
+| 6 | 0xA |
+| Volume- | 0xB |
+| 7 | 0xC |
+| 8 | 0xD |
+| 9 | 0xE |
+| Mute | 0xF |
 
 ## Code Walkthrough
 
 Below is the flowchart of the program. The program contains a function, pulseLen(), that returns the length of the pulse in microseconds. Just after the flowchart of the program lies the flowchart of the pulseLen() function.
 
 <p align="center" width="100%">
-    <img width="80%" src="https://user-images.githubusercontent.com/40300359/121802320-524f0c80-cc59-11eb-8e70-88b895702db7.png">
+    <img width="80%" src="https://user-images.githubusercontent.com/40300359/121805158-8d583c80-cc67-11eb-9ab1-a8bd61e31449.png">
 </p>
 
 The pulseLen() function takes 2 arguments - Pin and PulseState. The PulseState can take two values, HIGH_EDGE or LOW_EDGE.  The function returns the HIGH pulse duration if the PulseState is HIGH_EDGE or returns the LOW pulse duration if the PulseState is LOW_EDGE. The function uses the micros() function for time measurements. 
 
 <p align="center" width="100%">
-    <img width="65%" src="https://user-images.githubusercontent.com/40300359/121802191-de146900-cc58-11eb-83ea-5fed81f9997a.png">
+    <img width="60%"src="https://user-images.githubusercontent.com/40300359/121805172-9fd27600-cc67-11eb-9f4c-fad03f8dd8c5.png">
 </p>
 
 ## References
