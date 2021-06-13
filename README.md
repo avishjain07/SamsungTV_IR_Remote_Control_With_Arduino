@@ -86,7 +86,7 @@ Further, I decoded the frame to display the command and the Key pressed by the u
 Below is the flowchart of the program. The program contains a function, pulseLen(), that returns the length of the pulse in microseconds. Just after the flowchart of the program lies the flowchart of the pulseLen() function.
 
 <p align="center" width="100%">
-    <img width="80%" src="https://user-images.githubusercontent.com/40300359/121805158-8d583c80-cc67-11eb-9ab1-a8bd61e31449.png">
+    <img width="75%" src="https://user-images.githubusercontent.com/40300359/121805158-8d583c80-cc67-11eb-9ab1-a8bd61e31449.png">
 </p>
 
 The pulseLen() function takes 2 arguments - Pin and PulseState. The PulseState can take two values, HIGH_EDGE or LOW_EDGE.  The function returns the HIGH pulse duration if the PulseState is HIGH_EDGE or returns the LOW pulse duration if the PulseState is LOW_EDGE. The function uses the micros() function for time measurements. 
