@@ -59,13 +59,41 @@ I used a Hantek6022BL DSO-LA and an IR Receiver to capture the signal from the R
 
 I used an Arduino Uno and an IR Receiver to receive the signal and developed an Arduino program *(no inbuilt libraries and functions used, except micros() and Serial.print())* to capture and display the frame in Binary and Hex format. 
 
-Further, I decoded it to display the command and the Key pressed.
+Further, I decoded the frame to display the command and the Key pressed by the user.
 
 <p align="center" width="100%">
     <img width="100%" src="https://user-images.githubusercontent.com/40300359/121797496-2f632f00-cc3e-11eb-8406-1783e1fc99dd.png">
 </p>
 
+| Key  | Code |
+| :---:| :---:|
+| ON/OFF | 0x2UL |
+| 1 | 0x4UL |
+| 2 | 0x5UL |
+| 3 | 0x6UL |
+| Volume+ | 0x7UL |
+| 4 | 0x8UL |
+| 5 | 0x9UL |
+| 6 | 0xAUL |
+| Volume- | 0xBUL |
+| 7 | 0xCUL |
+| 8 | 0xDUL |
+| 9 | 0xEUL |
+| Mute | 0xFUL |
+
 ## Code Walkthrough
+
+Below is the flowchart of the program. The program contains a function, pulseLen(), that returns the length of the pulse in microseconds. Just after the flowchart of the program lies the flowchart of the pulseLen() function.
+
+<p align="center" width="100%">
+    <img width="80%" src="https://user-images.githubusercontent.com/40300359/121802320-524f0c80-cc59-11eb-8e70-88b895702db7.png">
+</p>
+
+The pulseLen() function takes 2 arguments - Pin and PulseState. The PulseState can take two values, HIGH_EDGE or LOW_EDGE.  The function returns the HIGH pulse duration if the PulseState is HIGH_EDGE or returns the LOW pulse duration if the PulseState is LOW_EDGE. The function uses the micros() function for time measurements. 
+
+<p align="center" width="100%">
+    <img width="65%" src="https://user-images.githubusercontent.com/40300359/121802191-de146900-cc58-11eb-83ea-5fed81f9997a.png">
+</p>
 
 ## References
 1. [Image1 Source](https://www.raspberry-pi-geek.com/var/rpi/storage/images/archive/2014/03/controlling-your-pi-with-an-infrared-remote/abbildung-1/7053-1-eng-US/Abbildung-1_lightbox.png)
